@@ -193,7 +193,7 @@ peekIntoModelCorpus <- function(sampleCorpusFulltext, topicModel, topicToInvesti
 
 
 getModelAlignments <- function(modelEvaluationData, topWordsToMatch = 100, similarityThreshold = 0.2, verbose = F) {
-  source("compare.R")
+  source("util/compare.R")
   numModels <- nrow(modelEvaluationData)
   if (numModels < 2) stop("Nothing to compare, got just than one model!")
   cat(c("Parameters: nWords", topWordsToMatch, "| threshold", similarityThreshold, "\n"))
